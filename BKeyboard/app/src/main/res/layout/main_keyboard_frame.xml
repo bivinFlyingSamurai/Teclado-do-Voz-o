@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical">
+
+    <!-- To ensure that key preview popup is correctly placed when the current system locale is
+         one of RTL locales, layoutDirection="ltr" is needed in the SDK version 17+. -->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/menu_strip_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/keyboard_bar_green"
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/menu_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_play_button" />
+
+        <ImageView
+            android:id="@+id/menu_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_twitter" />
+
+
+        <ImageView
+            android:id="@+id/menu_vozao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:src="@drawable/ic_vozao" />
+
+        <ImageView
+            android:id="@+id/menu_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="4dp"
+            android:src="@drawable/ic_app_logo" />
+
+        <ImageView
+            android:id="@+id/menu_betsul"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_betsul" />
+
+
+        <ImageView
+            android:id="@+id/menu_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_instagram" />
+
+
+        <ImageView
+            android:id="@+id/menu_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/ic_white_settings" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.android.inputmethod.latin.suggestions.SuggestionStripView
+        android:id="@+id/suggestion_strip_view"
+        style="?attr/suggestionStripViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/config_suggestions_strip_height"
+        android:background="@drawable/custom_black_shape"
+        android:gravity="center_vertical"
+        android:layoutDirection="ltr" />
+
+    <!-- To ensure that key preview popup is correctly placed when the current system locale is
+         one of RTL locales, layoutDirection="ltr" is needed in the SDK version 17+. -->
+    <com.android.inputmethod.keyboard.MainKeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr" />
+</LinearLayout>
